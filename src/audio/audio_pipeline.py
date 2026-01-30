@@ -14,9 +14,9 @@ import numpy as np
 import sounddevice as sd
 from faster_whisper import WhisperModel
 
-from config import SystemConfig
-from shared_memory import SharedMemorySystem, VoiceCommand
-from interpreter import VisionCommandInterpreter
+from src.core.config import SystemConfig
+from src.core.shared_memory import SharedMemorySystem, VoiceCommand
+from src.core.interpreter import VisionCommandInterpreter
 
 
 class AudioPipeline:

@@ -5,9 +5,25 @@ import signal
 import sys
 import time
 import cv2
-from config import SystemConfig
-from shared_memory import SharedMemorySystem
-from vision_pipeline import VisionPipeline
+import os
+import sys
+# Add project root to path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
+from src.core.config import SystemConfig
+from src.core.shared_memory import SharedMemorySystem, TrackedPerson
+
+# Optional reasoning imports
+try:
+    from src.vision.feature_extractor import CLIPFeatureExtractor
+    from src.vision.dataset_manager import EmbeddingDatabase
+    from src.reasoning.reasoning_engine import VisionLanguageReasoner, MultimodalFusion
+    HAS_REASONING = True
+except ImportError:
+    print("[WARNING] Reasoning components not available. Install 'transformers', 'torch', 'sentence-transformers' for full functionality.")
+    HAS_REASONING = False
+
+from src.vision.vision_pipeline import VisionPipeline
 
 def main() -> None:
     """Bootstrap the vision system."""

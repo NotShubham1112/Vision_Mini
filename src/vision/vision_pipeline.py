@@ -29,14 +29,14 @@ except ImportError:
         def get(self, *args, **kwargs):
             return []
 
-from config import SystemConfig
-from shared_memory import SharedMemorySystem, TrackedPerson
+from src.core.config import SystemConfig
+from src.core.shared_memory import SharedMemorySystem, TrackedPerson
 
 # Optional reasoning imports
 try:
-    from feature_extractor import CLIPFeatureExtractor
-    from dataset_manager import EmbeddingDatabase
-    from reasoning_engine import VisionLanguageReasoner, MultimodalFusion
+    from src.vision.feature_extractor import CLIPFeatureExtractor
+    from src.vision.dataset_manager import EmbeddingDatabase
+    from src.reasoning.reasoning_engine import VisionLanguageReasoner, MultimodalFusion
     HAS_REASONING = True
 except ImportError as e:
     print(f"[VISION] Reasoning modules not available: {e}")

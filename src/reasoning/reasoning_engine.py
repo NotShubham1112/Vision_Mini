@@ -10,7 +10,7 @@ from typing import List, Optional, Dict, Tuple, Any
 from PIL import Image
 import re
 from transformers import AutoTokenizer, BitsAndBytesConfig
-from config import SystemConfig
+from src.core.config import SystemConfig
 
 
 class VisionLanguageReasoner:

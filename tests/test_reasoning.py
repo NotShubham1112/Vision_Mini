@@ -9,10 +9,14 @@ import sys
 import argparse
 from pathlib import Path
 
-from config import SystemConfig
-from feature_extractor import CLIPFeatureExtractor
-from dataset_manager import EmbeddingDatabase
-from reasoning_engine import VisionLanguageReasoner, MultimodalFusion
+import os
+# Add project root to path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from src.core.config import SystemConfig
+from src.vision.feature_extractor import CLIPFeatureExtractor
+from src.vision.dataset_manager import EmbeddingDatabase
+from src.reasoning.reasoning_engine import VisionLanguageReasoner, MultimodalFusion
 
 
 def test_clip_extraction():

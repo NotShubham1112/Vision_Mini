@@ -10,9 +10,9 @@ import os
 from pathlib import Path
 from tqdm import tqdm
 
-from config import SystemConfig
-from feature_extractor import CLIPFeatureExtractor
-from dataset_manager import EmbeddingDatabase, DatasetBuilder
+from src.core.config import SystemConfig
+from src.vision.feature_extractor import CLIPFeatureExtractor
+from src.vision.dataset_manager import EmbeddingDatabase, DatasetBuilder
 
 
 def build_from_directory(dataset_path: str, output_path: str):

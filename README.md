@@ -1,5 +1,15 @@
 <div align="center">
 
+# 🧠 Multimodal Vision-Language Reasoning System
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLO-v8-yellow?style=for-the-badge&logo=ultralytics&logoColor=black)](https://github.com/ultralytics/ultralytics)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![CLIP](https://img.shields.io/badge/OpenAI-CLIP-green?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/openai/CLIP)
+[![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
+
+---
+
 # 👨‍💻 Created by Shubham Kambli
 ### Founder of COSMIC • AI Engineer • Open-Source Builder
 
@@ -10,14 +20,6 @@
 [📖 View Full Portfolio](https://shubham-plum.vercel.app) • [🏠 Wiki Home](#)
 
 ---
-
-# 🧠 Multimodal Vision-Language Reasoning System
-
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![YOLOv8](https://img.shields.io/badge/YOLO-v8-yellow?style=for-the-badge&logo=ultralytics&logoColor=black)](https://github.com/ultralytics/ultralytics)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![CLIP](https://img.shields.io/badge/OpenAI-CLIP-green?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/openai/CLIP)
-[![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
 
 </div>
 
@@ -58,6 +60,24 @@ graph TD
 
 ---
 
+## 📂 Project Structure
+
+```text
+multimodal_vision_system/
+├── src/
+│   ├── core/           # Main logic, config, and shared memory
+│   ├── vision/         # YOLO, CLIP, and dataset management
+│   ├── reasoning/      # LLaVA and multimodal fusion
+│   ├── audio/          # Transcription and voice processing
+│   └── utils/          # Helper scripts and tools
+├── tests/              # Test suite
+├── docs/               # Detailed documentation
+├── requirements.txt    # Project dependencies
+└── README.md           # Main project entry point
+```
+
+---
+
 ## 🛠️ Technology Stack
 
 | Component | Technology | Purpose |
@@ -83,8 +103,8 @@ graph TD
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/yourusername/multimodal-vision-system.git
-    cd multimodal-vision-system
+    git clone https://github.com/NotShubham1112/Vision_Mini.git
+    cd multimodal_vision_system
     ```
 
 2.  **Install Dependencies**
@@ -93,19 +113,13 @@ graph TD
     ```
 
 3.  **Setup Reasoning Components**
-    Follow the detailed setup in [`INSTALL_REASONING.md`](./INSTALL_REASONING.md) to download necessary model weights.
+    Follow the detailed setup in [`docs/INSTALL_REASONING.md`](./docs/INSTALL_REASONING.md) to download necessary model weights.
 
 ### Running the System
 
 **Basic Mode (Object Tracking + Identity):**
 ```bash
-python main.py
-```
-
-**Full Reasoning Mode (With LLaVA + CLIP):**
-Ensure `config.py` has `USE_VLM_REASONING = True`, then run:
-```bash
-python main.py
+python src/core/main.py
 ```
 
 ---
@@ -121,24 +135,13 @@ This system implements novel techniques in **Neuro-Symbolic AI** by combining ne
 | **Reasoning Latency** | ~500ms | acceptable for static analysis |
 | **Zero-Shot Precision** | 82.5% | Outperforms baseline YOLO |
 
-*See [`RESEARCH.md`](./RESEARCH.md) for detailed methodology and citation resources.*
+*See [`docs/RESEARCH.md`](./docs/RESEARCH.md) for detailed methodology and citation resources.*
 
 ---
 
 ## 🤝 Contribution Guide
 
-We welcome contributions from the community! Whether it's fixing bugs, improving documentation, or adding new features.
-
-1.  **Fork the Project**
-2.  **Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
-3.  **Commit your Changes** (`git commit -m 'Add some AmazingFeature'`)
-4.  **Push to the Branch** (`git push origin feature/AmazingFeature`)
-5.  **Open a Pull Request**
-
-### Areas for Contribution
--   [ ] optimization of VLM inference speed (TensorRT integration).
--   [ ] distinct audio-visual fusion pipeline.
--   [ ] Web-based dashboard for analytics.
+We welcome contributions! Please see [`CONTRIBUTING.md`](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ---
 
@@ -151,6 +154,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <div align="center">
 
 **Built with ❤️ by Shubham Kambli**
-[LinkedIn](#) • [GitHub](https://github.com/shubhamkambli)
+[LinkedIn](#) • [GitHub](https://github.com/NotShubham1112)
 
 </div>

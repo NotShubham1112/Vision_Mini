@@ -9,7 +9,7 @@ import cv2
 from typing import List, Optional, Tuple
 from PIL import Image
 import open_clip
-from config import SystemConfig
+from src.core.config import SystemConfig
 
 
 class CLIPFeatureExtractor:
